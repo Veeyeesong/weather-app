@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    letter-spacing: -0.5px;
+}
+
+
+body {
+    background: url('./images/forecast.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.weather-box {
+    width: 40%;
+    height: 900px;
+    background: white;
+    padding: 4rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* max-width: 500px;
+    width: 100%; */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #161C2D;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #161C2D;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.weather-icon {
+    width: 260px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 2rem;
+    width: 100%;
+    height: 70px;
+    background-color: #F4F4F4;
+    border: 1.5px solid #1D23EB;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 70%;
+    padding: 1.5rem;
+    background: #1D23EB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1.5rem;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #161C2D;
+}
+
+.weather-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4rem;
+    
+}
+
+.card {
+    width: 30%;
+    height: 150px;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #1D23EB;
+}
+
+.card h4 {
+    font-size: 0.99rem;
+    color: #161C2D;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #161C2D;
+}

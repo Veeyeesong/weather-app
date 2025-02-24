@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <!--main container-->
+    <div class="container">
+       
+
+        <!--weather box-->
+        <div class="weather-box">
+            <h2>Know the weather condition of your city</h2>
+            <p>Get real-time weather forecast of any city.</p>
+            <img src="./images/forecast 2.png" alt="Weather Icon" class="weather-icon">
+
+            <div class="input-container">
+                <input type="text" id="city" placeholder="Name of city (e.g. Lagos)">
+                <button id="getWeather">Get Weather</button>
+            </div>
+
+            <h3 id="city-name"></h3>
+            <div class="weather-details">
+                <div class="card">
+                    <h4>Temperature</h4>
+                    <p id="temperature">--</p>
+                </div>
+                <div class="card">
+                    <h4>Humidity</h4>
+                    <p id="humidity">--</p>
+                </div>
+                <div class="card">
+                    <h4>Chance of Rain</h4>
+                    <p id="rain">--</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="./weather.js"></script>
+</body>
+</html>
