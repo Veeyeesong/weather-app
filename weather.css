@@ -19,11 +19,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Full height viewport */
     width: 100%;
 }
 
 .weather-box {
-    width: 40%;
+
+    width: 50%;
+    height: auto;
+    padding: 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Keep content centered */
+    align-items: center;
+    overflow: hidden; /* Ensures nothing overflows */
+
+
+
+
+
+
+
+
+
+
+
+
+    /* width: 50%;
+    max-height: 400px; 
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+
+
+
+    /* width: 40%;
     height: 900px;
     background: white;
     padding: 4rem;
@@ -31,7 +66,20 @@ body {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     /* max-width: 500px;
-    width: 100%; */
+    width: 100%; */ 
+
+}
+
+
+.weather-box input {
+    width: 90%;
+    height: 45px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -59,7 +107,7 @@ p {
     gap: 10px;
     margin-bottom: 20px;
 }
-
+/* 
 input {
     padding: 2rem;
     width: 100%;
@@ -68,9 +116,22 @@ input {
     border: 1.5px solid #1D23EB;
     border-radius: 5px;
     font-size: 1.2rem;
-}
+} */
 
-button {
+
+
+.weather-box button {
+    width: 90%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #1D23EB;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* button {
     width: 70%;
     padding: 1.5rem;
     background: #1D23EB;
@@ -80,7 +141,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 1.5rem;
-}
+} */
 
 button:hover {
     background: darkblue;
@@ -113,85 +174,200 @@ h3 {
     border: 1px solid #1D23EB;
 }
 
-.card h4 {
-    font-size: 0.99rem;
-    color: #161C2D;
+
+/* media query */
+
+/* Laptop and Tablet Adjustments */
+@media (max-width: 992px) {
+    .weather-box {
+        width: 60%;
+        max-height: 350px; /* Reduce height */
+        padding: 1.5rem;
+    }
 }
 
-.card p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #161C2D;
-}
-
-
-/* 📌 Responsive Design */
+/* Tablet and Small Devices */
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-        max-width: 90%;
+    .weather-box {
+        width: 80%;
+        max-height: 320px; /* Further reduce height */
+        padding: 1.2rem;
     }
 
-    .input-container {
-        flex-direction: column;
-        gap: 5px;
+    .weather-icon {
+        width: 180px; /* Scale down icon */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .weather-box {
+        width: 90%;
+        max-height: 300px; /* Make it even smaller */
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     input {
-        width: 100%;
+        height: 40px;
+        font-size: 0.9rem;
     }
 
     button {
         width: 100%;
+        padding: 0.8rem;
+        font-size: 14px;
     }
 
-    .weather-info {
-        grid-template-columns: repeat(2, 1fr);
+    .weather-icon {
+        width: 140px;
     }
 }
 
-/* 📌 iPhone Screen (375px and below) */
-@media (max-width: 375px) {
-    h2 {
-        font-size: 18px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop (1200px and above) */
+/* @media (max-width: 1200px) {
+    .weather-box {
+        width: 50%;
+        height: auto;
+        padding: 3rem;
     }
 
-    p {
-        font-size: 12px;
+    input {
+        height: 60px;
+        font-size: 1rem;
     }
 
-    .weather-info {
-        display: flex;
+    button {
+        padding: 1.2rem;
+    }
+} */
+
+/* Laptop (992px - 1199px) */
+/* @media (max-width: 992px) {
+    .weather-box {
+        width: 60%;
+        padding: 2.5rem;
+    }
+
+    .weather-icon {
+        width: 200px;
+    }
+
+    .weather-details {
         flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        gap: 20px;
     }
 
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+} */
+
+/* Tablet (768px - 991px) */
+/* @media (max-width: 768px) {
     .weather-box {
         width: 80%;
-        padding: 12px;
-        font-size: 12px;
-    }
-}
-
-/* 📌 Smallest Phone Screens */
-@media (max-width: 320px) {
-    .container {
-        padding: 15px;
-        max-width: 95%;
+        padding: 2rem;
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 1.8rem;
     }
 
     p {
-        font-size: 11px;
+        font-size: 1.2rem;
     }
 
+    input {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+} */
+
+/* Mobile (320px - 767px) */
+/* @media (max-width: 480px) {
     .weather-box {
         width: 90%;
-        padding: 10px;
-        font-size: 11px;
+        padding: 1.5rem;
     }
-}
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .weather-icon {
+        width: 150px;
+    }
+
+    input {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+} */
